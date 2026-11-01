@@ -1,0 +1,23 @@
+{
+  "name": "rebase-helper",
+  "displayName": "Rebase Helper",
+  "description": "Interactive rebase, fetch from origin and one-click squash from VS Code. Conflicts are resolved in the normal Source Control view.",
+  "version": "0.1.0",
+  "publisher": "ShahafChen",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/ShahafChen/vscode-rebase-helper" },
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["SCM Providers"],
+  "main": "./extension.js",
+  "extensionDependencies": ["vscode.git"],
+  "contributes": {
+    "commands": [
+      { "command": "rebaseHelper.fetch", "title": "Fetch from origin", "category": "Rebase Helper" },
+      { "command": "rebaseHelper.interactiveRebase", "title": "Interactive Rebase…", "category": "Rebase Helper" },
+      { "command": "rebaseHelper.squash", "title": "Squash Commits…", "category": "Rebase Helper" },
+      { "command": "rebaseHelper.continue", "title": "Continue Rebase", "category": "Rebase Helper" },
+      { "command": "rebaseHelper.abort", "title": "Abort Rebase", "category": "Rebase Helper" }
+    ]
+  },
+  "scripts": { "test": "node test.js", "package": "npx @vscode/vsce package" }
+}
